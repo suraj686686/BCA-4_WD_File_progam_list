@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Embedded Audio and Video</title>
+    <style>
+        .container {
+			display: flex;
+			flex-direction: row;
+			height: 100vh;		}
+		.video, .audio {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+			background-color: #f40b0b;		}
+    </style></head>
+<body>
+	<div class="container">
+		<div class="video">
+			<video width="480" height="360" controls>
+				<source src="video.mp4" type="video/mp4">                  
+            </video>
+            <h1>Video Example</h1>
+		</div>
+        <br><br><hr><hr>
+		<div class="audio">
+			<audio controls>
+				<source src="song.mp3" type="audio/mpeg">
+                    
+            </audio>
+            <h1>Audio Example</h1>
+		</div>
+	</div>
+</body>
+</html>

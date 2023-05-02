@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Department of Computer Science</title>
+	<link rel="stylesheet" href="15.css">
+    <script>
+      function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var message = document.forms["myForm"]["message"].value;
+        if (name == "") {
+          alert("Please enter your name");
+          return false;
+        }
+        if (email == "") {
+          alert("Please enter your email");
+          return false;
+        }
+        if (message == "") {
+          alert("Please enter a message");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Department of Computer Science</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Welcome to the Department of Computer Science</h2>
+        <center><img src="download.png" alt="loading a image"></center>
+        <p>
+          The Department of Computer Science 
+		  offers programs of study leading to 
+		  the Bachelor of Science, Master of Science,
+		   and Doctor of Philosophy degrees in computer science.
+        </p>
+      </section>
+      <section>
+        <h2>About Us</h2>
+        <p>
+          The Department of Computer Science at 
+		  Suraj University has a long history of 
+		  excellence in research and education. 
+		  Our faculty members are world-renowned 
+		  experts in their fields, and our graduates 
+		  go on to successful careers in industry and academia.
+        </p>
+      </section>
+      <section>
+        <h2>Faculty</h2>
+        <ul>
+          <li>Prof. Neha Sharma</li>
+          <li>Dr. Raj Kumar</li>
+          <li>Dr. Suraj Verma</li>
+          <li>Prof. Mukesh Kumar</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Research</h2>
+        <p>
+          Our department is involved in a
+		   variety of research projects in areas such as
+		    artificial intelligence, computer graphics,
+			 computer networks, databases, and software engineering.
+			  We have state-of-the-art facilities
+			   to support our research efforts.
+        </p>
+      </section>
+      <section>
+        <h2>Contact Us</h2>
+        <form name="myForm" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Department of Computer 
+		Science, Suraj University</p>
+    </footer>
+  </body>
+</html>

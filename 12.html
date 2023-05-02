@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Two Pages Displayed</title>
+	<style>
+		.page {
+			width: 50%;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			border: none;
+		}	
+		.page1 {
+			background-color: #ff0000;
+			z-index: 2;
+		}		
+		.page2 {
+			background-color: #2200ff;
+			left: 50%;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<iframe src="13.html" class="page page1"></iframe>
+	<iframe src="14.html" class="page page2"></iframe>
+	<script>
+		var page1 = document.querySelector('.page1');
+		var page2 = document.querySelector('.page2');		
+		function adjustPageHeight() {
+			var maxHeight = Math.max(page1.contentWindow.document.body.scrollHeight, page2.contentWindow.document.body.scrollHeight);
+			page1.style.height = maxHeight + 'px';
+			page2.style.height = maxHeight + 'px';
+		}		
+		page1.addEventListener('load', adjustPageHeight);
+		page2.addEventListener('load', adjustPageHeight);
+		window.addEventListener('resize', adjustPageHeight);
+	</script>
+</body>
+</html>
